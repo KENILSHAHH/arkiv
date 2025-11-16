@@ -1,0 +1,28 @@
+{
+  "name": "arkiv-chainlink-price-feed",
+  "version": "1.0.0",
+  "description": "Real-time crypto price feed from Polymarket with Arkiv Network integration and WebSocket API",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "chainlink",
+    "arkiv",
+    "defi",
+    "price-feed",
+    "oracle"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@arkiv-network/sdk": "^0.4.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.0",
+    "express": "^4.18.2",
+    "ws": "^8.14.0"
+  }
+}
