@@ -1,4 +1,4 @@
-# 🎯 Arkiv Prediction Markets
+# 🎯 Arc - Range Markets
 
 **A fully transparent, verifiable on-chain prediction market platform powered by Arkiv Network**
 
