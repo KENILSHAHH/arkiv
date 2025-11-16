@@ -6,9 +6,13 @@
 
 ### 📹 Demo Video
 
-[![Watch Demo Video](https://cdn.loom.com/sessions/thumbnails/73011a0bcd054a1fbddb0e1e7bdbd56e-with-play.gif)](https://www.loom.com/share/73011a0bcd054a1fbddb0e1e7bdbd56e)
+<a href="https://www.loom.com/share/73011a0bcd054a1fbddb0e1e7bdbd56e">
+  <img style="max-width:600px;" src="https://cdn.loom.com/sessions/thumbnails/73011a0bcd054a1fbddb0e1e7bdbd56e-1734326405862-with-play.gif">
+</a>
 
-*Click to watch the demo video*
+*Click to watch the full demo*
+
+---
 
 ### 📊 [View Pitch Deck](https://www.canva.com/design/DAG42Kt0n4g/USkGwQhsFC9otnGSgtZ9PQ/edit?utm_content=DAG42Kt0n4g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
