@@ -61,7 +61,7 @@ Traditional prediction markets like **Polymarket** suffer from fundamental trans
   "price": 95593.23,
   "timestamp": 1700000000,
   "pair": "BTC/USD",
-  "dataSource": "polymarket-realtime"
+  "dataSource": "chainlink-data-streams-realtime"
 }
 ```
 - ✅ Every price update (>0.01% change)
