@@ -1,4 +1,5 @@
-# 🎯 Arc - Range Markets
+#  <img width="600" height="436" alt="Screenshot 2025-11-16 at 5 50 15 AM" src="https://github.com/user-attachments/assets/5066b4aa-f5a4-4a7d-8cf4-ae877f7cd5c3" />
+Arc - Range Markets
 
 **A fully transparent, verifiable on-chain prediction market platform powered by Arkiv Network**
 
