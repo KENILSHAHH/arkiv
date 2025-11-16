@@ -530,10 +530,6 @@ curl http://localhost:3001/api/orderbook/BTC
 
 ---
 
-#### Place Order
-```http
-POST /api/orderbook/:token
-```
 
 **Body:**
 ```json
@@ -574,29 +570,6 @@ curl -X POST http://localhost:3001/api/orderbook/BTC \
 }
 ```
 
----
-
-### WebSocket API
-
-#### Connect
-```javascript
-const ws = new WebSocket('ws://localhost:3001/ws');
-
-ws.on('message', (data) => {
-  const message = JSON.parse(data);
-  
-  if (message.type === 'price_update') {
-    console.log(`${message.token}: $${message.data.price}`);
-  }
-  
-  if (message.type === 'orderbook_update') {
-    console.log(`Orderbook updated for ${message.token}`);
-  }
-});
-```
-
----
-
 ## 🔍 Verifying Data on Arkiv Network
 
 ### Using Arkiv SDK
@@ -628,13 +601,7 @@ prices.forEach(entity => {
 });
 ```
 
-### Using Arkiv Explorer (Web UI)
 
-1. Visit: https://explorer.arkiv.network
-2. Search by entity key (from API response)
-3. View full payload + attributes
-4. Verify timestamp authenticity
-5. Check data immutability proof
 
 ---
 
@@ -723,77 +690,9 @@ expiresIn: ExpirationTime.fromWeeks(4)
 
 ---
 
-### Add More Tokens
 
-```javascript
-// In express/server.js
-const CRYPTO_SYMBOLS = {
-  ethusdt: 'ETH',
-  btcusdt: 'BTC',
-  solusdt: 'SOL',
-  adausdt: 'ADA',    // Add Cardano
-  maticusdt: 'MATIC', // Add Polygon
-  avaxusdt: 'AVAX',   // Add Avalanche
-};
 
-// Update storage objects
-const currentPrices = {
-  BTC: {...},
-  ETH: {...},
-  SOL: {...},
-  ADA: {...},
-  MATIC: {...},
-  AVAX: {...},
-};
-```
 
----
-
-## 🐛 Troubleshooting
-
-### "PRIVATE_KEY is not set"
-
-**Problem**: Arkiv client can't initialize  
-**Solution**: Create `.env` file with your private key:
-
-```bash
-PRIVATE_KEY=0xyour_arkiv_private_key_here
-```
-
-Get testnet keys at: https://arkiv.network/testnet
-
----
-
-### WebSocket Connection Failures
-
-**Problem**: Can't connect to Polymarket  
-**Solution**: 
-- Check internet connection
-- Verify Polymarket API is online: https://status.polymarket.com
-- Server will auto-reconnect (wait 5 seconds)
-
----
-
-### Orders Not Appearing on Arkiv
-
-**Problem**: Orders placed but not stored on-chain  
-**Solution**:
-1. Check server logs for "Failed to upload order"
-2. Verify Arkiv Network is online
-3. Check account has sufficient balance for storage fees
-4. Try with smaller order first
-
----
-
-### Price Updates Slow
-
-**Problem**: Prices not updating frequently  
-**Solution**:
-1. Check WebSocket connection: `GET /api/health`
-2. Lower price change threshold (see Advanced Configuration)
-3. Verify Polymarket WebSocket stream is active
-
----
 
 ## 📚 Resources
 
@@ -815,31 +714,7 @@ Get testnet keys at: https://arkiv.network/testnet
 
 ---
 
-## 🗺️ Roadmap
 
-### ✅ Completed
-- [x] Real-time price streaming (sub-second)
-- [x] Order placement & orderbook management
-- [x] On-chain storage via Arkiv Network
-- [x] Auto-pruning with TTL
-- [x] WebSocket API for live updates
-- [x] REST API for historical queries
-
-### 🚧 In Progress
-- [ ] UMA Optimistic Oracle integration
-- [ ] Smart contract settlement logic
-- [ ] Dispute resolution UI
-- [ ] Historical data export (CSV/JSON)
-
-### 🔮 Future
-- [ ] Next.js frontend dashboard
-- [ ] Mobile app (iOS/Android)
-- [ ] Multi-chain support (Polygon, Arbitrum)
-- [ ] Automated market maker (AMM) improvements
-- [ ] Liquidity provision incentives
-- [ ] Governance token for protocol decisions
-
----
 
 ## 🤝 Contributing
 
