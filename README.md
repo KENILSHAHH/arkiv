@@ -1,6 +1,10 @@
 # <img width="40" height="22" alt="Screenshot 2025-11-16 at 5 50 15 AM" src="https://github.com/user-attachments/assets/5066b4aa-f5a4-4a7d-8cf4-ae877f7cd5c3" />  Arc - Range Markets
+---
 
-**A fully transparent, verifiable on-chain prediction market platform powered by Arkiv Network**
+Built for traders who demand proof, not promises.
+
+---
+**A fully transparent, verifiable on-chain range markets with sub second orderbook updates powered by Arkiv Network**
 
 <div align="center">
 
@@ -14,11 +18,7 @@ https://www.loom.com/share/73011a0bcd054a1fbddb0e1e7bdbd56e
 
 </div>
 
----
 
-Built for traders who demand proof, not promises.
-
----
 
 ## 🚨 The Problem with Centralized Prediction Markets
 
