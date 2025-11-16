@@ -1,5 +1,9 @@
 # <img width="40" height="22" alt="Screenshot 2025-11-16 at 5 50 15 AM" src="https://github.com/user-attachments/assets/5066b4aa-f5a4-4a7d-8cf4-ae877f7cd5c3" />  Arc - Range Markets
 
+Demo Video - https://www.loom.com/share/73011a0bcd054a1fbddb0e1e7bdbd56e
+
+Pitch Deck - https://www.canva.com/design/DAG42Kt0n4g/USkGwQhsFC9otnGSgtZ9PQ/edit?utm_content=DAG42Kt0n4g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
 **A fully transparent, verifiable on-chain prediction market platform powered by Arkiv Network**
 
 Built for traders who demand proof, not promises.
