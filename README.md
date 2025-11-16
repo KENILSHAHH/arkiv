@@ -6,11 +6,7 @@
 
 ### 📹 Demo Video
 
-<a href="https://www.loom.com/share/73011a0bcd054a1fbddb0e1e7bdbd56e">
-  <img style="max-width:600px;" src="https://cdn.loom.com/sessions/thumbnails/73011a0bcd054a1fbddb0e1e7bdbd56e-1734326405862-with-play.gif">
-</a>
-
-*Click to watch the full demo*
+https://www.loom.com/share/73011a0bcd054a1fbddb0e1e7bdbd56e
 
 ---
 
