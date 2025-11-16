@@ -47,13 +47,8 @@ export default function PredictionMarket() {
     return () => ws.close()
   }, [])
   
-  // Calculate price to beat (e.g., price from 15 minutes ago or initial price)
-  const priceToBeat = useMemo(() => {
-    if (priceHistory.length > 0) {
-      return priceHistory[0].price
-    }
-    return currentPrice?.previousPrice || currentPrice?.price || 95479.52
-  }, [priceHistory, currentPrice])
+  // Fixed price to beat as dummy value
+  const priceToBeat = 96098.48
 
   // Countdown timer
   useEffect(() => {
@@ -167,16 +162,23 @@ export default function PredictionMarket() {
     <div className="min-h-screen bg-white">
       {/* Top Navigation */}
       <nav className="border-b border-gray-200">
-        <div className="flex items-center gap-6 px-6 py-3 overflow-x-auto">
-          {navItems.map((item, index) => (
-            <button
-              key={index}
-              className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 whitespace-nowrap"
-            >
-              {item.icon && <item.icon className="w-4 h-4" />}
-              {item.label}
-            </button>
-          ))}
+        <div className="flex items-center justify-between px-6 py-3">
+          <div className="flex items-center gap-6 overflow-x-auto">
+            {navItems.map((item, index) => (
+              <button
+                key={index}
+                className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 whitespace-nowrap"
+              >
+                {item.icon && <item.icon className="w-4 h-4" />}
+                {item.label}
+              </button>
+            ))}
+          </div>
+          {/* Wallet Balance */}
+          <div className="flex items-center gap-2 bg-gray-100 px-4 py-2 rounded-lg">
+            <span className="text-sm font-medium text-gray-700">Wallet:</span>
+            <span className="text-sm font-bold text-gray-900">$100.00</span>
+          </div>
         </div>
       </nav>
 
@@ -415,7 +417,7 @@ export default function PredictionMarket() {
                   : 'bg-gray-200 hover:bg-gray-300 text-gray-600'
               }`}
             >
-              <div className="text-lg">Up {selectedSide === 'up' ? '✓' : ''}</div>
+              <div className="text-lg">Up</div>
               <div className="text-2xl font-bold">{currentUpPrice}¢</div>
             </Button>
             <Button 
@@ -426,7 +428,7 @@ export default function PredictionMarket() {
                   : 'bg-gray-200 hover:bg-gray-300 text-gray-600'
               }`}
             >
-              <div className="text-lg">Down {selectedSide === 'down' ? '✓' : ''}</div>
+              <div className="text-lg">Down</div>
               <div className="text-2xl font-bold">{currentDownPrice}¢</div>
             </Button>
           </div>
@@ -435,7 +437,7 @@ export default function PredictionMarket() {
           <div className="mb-6">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium">Amount</span>
-              <span className="text-sm text-gray-500">Balance $30.24</span>
+              <span className="text-sm text-gray-500">Balance $100.00</span>
             </div>
             <input
               type="text"
@@ -447,7 +449,7 @@ export default function PredictionMarket() {
               <Button variant="outline" size="sm" onClick={() => setAmount(amount + 1)}>+$1</Button>
               <Button variant="outline" size="sm" onClick={() => setAmount(amount + 20)}>+$20</Button>
               <Button variant="outline" size="sm" onClick={() => setAmount(amount + 100)}>+$100</Button>
-              <Button variant="outline" size="sm" onClick={() => setAmount(30)}>Max</Button>
+              <Button variant="outline" size="sm" onClick={() => setAmount(100)}>Max</Button>
             </div>
           </div>
 
@@ -478,7 +480,7 @@ export default function PredictionMarket() {
                 Placing Order...
               </span>
             ) : (
-              `Buy ${selectedSide === 'up' ? 'Up' : 'Down'} (→ Arkiv)`
+              `Buy ${selectedSide === 'up' ? 'Up' : 'Down'}`
             )}
           </Button>
 
